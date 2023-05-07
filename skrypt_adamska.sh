@@ -38,6 +38,13 @@ case "$1" in
                 git clone https://github.com/MargoAd/Lab4.git
                 export PATH=$PATH:$(pwd)/repo
                 ;;
+	  --error|-e)
+                num_errors=${2:-100}
+                for (( i=1; i<=$num_errors;i++ )); do
+                        mkdir -p "error$i"
+                        echo "skrypt.sh -e $i" > "error$i/error$i.txt"
+                done
+                read -p "Press Enter to exit..."
 
 esac
 
