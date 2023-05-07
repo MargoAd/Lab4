@@ -1,4 +1,4 @@
-]#!/bin/bash
+#!/bin/bash
 
 case "$1" in
     --date|-d)
@@ -17,7 +17,7 @@ case "$1" in
                 read -p "Press Enter to exit..."
         ;;
 
---logs|-l)
+         --logss|-l)
                         num_logs=${2:-30}
                 for ((i=1; i<=$num_logs; i++)); do
                 echo "Nazwa pliku: log$i.txt" > log$i.txt
@@ -26,3 +26,12 @@ case "$1" in
                 done
                 read -p "Press Enter to exit..."
 ;;
+	
+	 --help|-h) echo "Dostępne opcje:" 
+	echo "--date, -d: wyświetla dzisiejszą datę" 
+	echo "--logs, -l [liczba]: tworzy [liczba] plików logx.txt, gdzie x to > echo "
+ 	echo "--logss, -l [liczba]: tworzy [liczba] plików logx.txt, gdz>'	"
+	echo "--help, -h: wyświetla dostępne opcje" 
+
+;;
+esac
