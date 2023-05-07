@@ -34,4 +34,10 @@ case "$1" in
 	echo "--help, -h: wyświetla dostępne opcje" 
 
 ;;
+	     --init
+                git clone https://github.com/MargoAd/Lab4.git
+                export PATH=$PATH:$(pwd)/repo
+                ;;
+
 esac
+
